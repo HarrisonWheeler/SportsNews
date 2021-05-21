@@ -1,5 +1,6 @@
 <template>
-  <div class="sportsComponent">
+  <div class="sportsComponent col-3">
+    <h1>helloooo</h1>
   </div>
 </template>
 
@@ -7,6 +8,12 @@
 
 export default {
   name: 'SportsComponent',
+  props: {
+    newsProp: {
+      type: Object,
+      required: true
+    }
+  },
   setup() {
     return {}
   },
