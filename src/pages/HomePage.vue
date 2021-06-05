@@ -1,11 +1,13 @@
 <template>
-  <div class="homePage container-fluid" v-if="state.loading">
-    <div class="row">
+  <div class="homePage background-color container-fluid">
+    <div class="row" v-if="state.loading">
       <h2>...Loading</h2>
     </div>
-  </div>
-  <div class="row" v-else>
-    <sports-component v-for="n in state.news" :key="n" :news-prop="n" />
+    <div class="row p-2" v-else>
+      <div class="card-columns">
+        <sports-component v-for="n in state.news" :key="n" :news-prop="n" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -37,5 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.background-color{
+  background-color: #708090;
+}
 </style>
